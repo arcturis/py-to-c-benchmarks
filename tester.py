@@ -7,9 +7,10 @@ print("Starting test")
 low_latency.run_me("start")
 
 start = time.perf_counter()
-for i in range(1000):
+for i in range(10000):
     low_latency.run_me("something")
 end = time.perf_counter()
-print("Execution = {}".format(end - start))
+count = low_latency.run_me("")
+print("Execution = {} runs took {}s".format(count, (end - start)))
 
 print("Ending test")
