@@ -2,7 +2,7 @@
 
 int counter = 0;
 
-int run_me(char* data) {
+int run_me(const char* data) {
     counter++;
     for (unsigned int i = 0; i < 100000; ++i) {
         asm("NOP");
